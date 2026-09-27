@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Checkpoints y volumenes (por si acaso)
+*.pth
+*.pt
+*.nii
+*.nii.gz
+
+# Editor / OS
+.vscode/
+*.code-workspace
+.DS_Store
