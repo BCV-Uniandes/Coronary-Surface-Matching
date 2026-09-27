@@ -1,6 +1,8 @@
 # Beyond Volume Overlap: Surface Matching for Topology-Aware Coronary Artery Segmentation
 
-[![Paper](https://img.shields.io/badge/Paper-STACOM@MICCAI_2026-blue)](https://github.com/BCV-Uniandes/Coronary-Surface-Matching)
+[![Read the Paper](https://img.shields.io/badge/📄_Read_the_Paper-PDF-red?style=for-the-badge)](https://github.com/BCV-Uniandes/Coronary-Surface-Matching/blob/main/paper.pdf)
+
+[![Venue](https://img.shields.io/badge/Venue-STACOM@MICCAI_2026-blue)](https://github.com/BCV-Uniandes/Coronary-Surface-Matching/blob/main/paper.pdf)
 [![Code](https://img.shields.io/badge/Code-GitHub-black?logo=github)](https://github.com/BCV-Uniandes/Coronary-Surface-Matching)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/BCV-Uniandes/Coronary-Surface-Matching/blob/main/LICENSE)
 [![Framework: nnU-Net](https://img.shields.io/badge/Framework-nnU--Net_v2-orange)](https://github.com/MIC-DKFZ/nnUNet)
