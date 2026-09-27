@@ -117,6 +117,8 @@ Predictions colored against the reference: green is correctly segmented (TP), re
 
 ## 📦 Getting Started
 
+This repository provides the surface loss, trainers, and surface metric built on top of [nnU-Net v2](https://github.com/MIC-DKFZ/nnUNet). It is not a standalone package: the training code plugs into an nnU-Net v2 installation, while the metric and evaluation scripts run on their own.
+
 **1. Clone the repository.**
 
 ```bash
@@ -124,15 +126,26 @@ git clone https://github.com/BCV-Uniandes/Coronary-Surface-Matching.git
 cd Coronary-Surface-Matching
 ```
 
-**2. Set up the environment.**
+**2. Create the environment and install nnU-Net v2.**
 
 ```bash
 conda create -n coronary-surface python=3.10
 conda activate coronary-surface
-pip install -e .
+pip install nnunetv2
+pip install monai            # required for the SwinUNETR backbone
 ```
 
-The framework is built on top of [nnU-Net v2](https://github.com/MIC-DKFZ/nnUNet). SwinUNETR and NexToU are integrated as backbones within it.
+**3. Register the trainers and losses.** Copy the training files into your nnU-Net installation, where `$NNUNET` is the root of your nnU-Net v2 source:
+
+```bash
+# loss functions -> nnunetv2/training/loss/
+cp surface_loss/*.py  $NNUNET/nnunetv2/training/loss/
+
+# trainers -> nnunetv2/training/nnUNetTrainer/
+cp trainers/*.py      $NNUNET/nnunetv2/training/nnUNetTrainer/
+```
+
+The scripts in `metric/` and `evaluation/` run standalone and only need the predictions and reference masks as input.
 
 ---
 
